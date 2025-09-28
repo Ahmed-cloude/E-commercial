@@ -1,18 +1,18 @@
 import React from "react";
 import "./NavBar.css";
 import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faDownload,faCartArrowDown,faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faDownload,faCartArrowDown,faTimes,faList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
-
+import SideNav from "./sideNavBar/sideNav";
 const NavBar =()=>{
+
     const ppp=()=>{
         window.scrollTo({
             top:0,
             behavior:"smooth"
         })
     }
-    
     const ppp1=()=>{
         window.scrollTo({
             top:document.querySelector(".lyout").clientHeight +100,
@@ -41,18 +41,21 @@ const NavBar =()=>{
                 </li>
             </ul>
             <ul>
-                <div className="listContainer">
+                <div className="linkContainer">
                     <li onClick={ppp} >Home </li>
                     <li onClick={ppp1} >Contant</li>
                     <li onClick={ppp2} >Contect</li>
                     <li><Link to="/allitems">items </Link></li>
                 </div>
-                <li>
+                <li className="cartIcon">
                     <Link to="/cart">
                         <FontAwesomeIcon icon={faCartArrowDown} />
                     </Link> 
                 </li>
+                
+                <SideNav />
             </ul>
+            
         </div>
     );
 }
