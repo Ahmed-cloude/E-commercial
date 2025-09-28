@@ -10,8 +10,7 @@ const Items1 =(props)=>{
 
     const itemss = useSelector(state => state)
     const patcher = useDispatch()
-    // window.localStorage.setItem("items",[]);
-    // console.log(typeof(window.localStorage.getItem("items")))
+    
     const clickHandler = (e)=>{
         // console.log(e)
         let x=window.localStorage.getItem("items");

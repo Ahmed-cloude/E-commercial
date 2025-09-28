@@ -4,19 +4,21 @@ import './AllItems.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import axiosInstance from '../../api/axiosInstance'
 const AllItems =()=>{
     const [dataOfAllItems , setDataOfAllItems]= useState({
         data:[]
     })
     useEffect(()=>{
-        fetch('https://api.escuelajs.co/api/v1/products')
-            .then(response => response.json())
-            .then(data =>{
-                setDataOfAllItems({
-                    ...dataOfAllItems,
-                    data:data
-                });
+        const fetching = async ()=>{
+            const response= await axiosInstance.get('/')
+            console.log(response.data)
+            setDataOfAllItems({
+                ...dataOfAllItems,
+                data:response.data
             })
+        }
+        fetching()
     },[])
     return(
         <div className='allItems'>
