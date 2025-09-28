@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
 
 const Cart =()=>{
+
+    const itemsss = useSelector(state=>state)
+    const patch = useDispatch()
     const [data, setData]= useState({
         data:[],
     });
@@ -27,14 +32,14 @@ const Cart =()=>{
                         <img src={data.data[0].images[1]} />
                         <div className="nameOfOrder">{data.data[0].title} <br/> <i>Price :{data.data[0].price}$</i> </div>
                     </div>
-                    <button className="delete">Delete</button>
+                    <button onClick={(e)=>patch({type:'Add'})} className="delete">Delete</button>
                 </div>
                 <div className="order">
                     <div className="containerOfOrder">
                         <img src={data.data[1].images[1]} />
                         <div className="nameOfOrder"> {data.data[1].title} <br/> <i>Price :{data.data[1].price}$</i> </div>
                     </div>
-                    <button className="delete">Delete</button>
+                    <button  className="delete">Delete</button>
                 </div>
                 <div className="order">
                     <div className="containerOfOrder">
@@ -50,6 +55,7 @@ const Cart =()=>{
                     </div>
                     <button className="delete">Delete</button>
                 </div>
+                
             </>
         );
     }
@@ -66,6 +72,7 @@ const Cart =()=>{
                         <div className="cartEmpty">Cart is Empty....</div>
                     }
                 </div>
+                {itemsss.ahmed}
                 <div className="footer">
                     <p>Total Price : 700$</p>
                     <button>Buy</button>

@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import Spiner from "../../Spiner/Spiner";
 import { useState, useEffect } from "react";
-
+import { useDispatch, useSelector } from "react-redux";
 
 const Items1 =(props)=>{
+
+    const itemss = useSelector(state => state)
+    const patcher = useDispatch()
     // window.localStorage.setItem("items",[]);
     // console.log(typeof(window.localStorage.getItem("items")))
     const clickHandler = (e)=>{
@@ -14,6 +17,7 @@ const Items1 =(props)=>{
         let x=window.localStorage.getItem("items");
         x=x+" "+e.id;
         window.localStorage.setItem("items",x);
+
     }
     return (
         <div className="">
@@ -27,7 +31,7 @@ const Items1 =(props)=>{
                                     <img src={ele.images[1]} />
                                     <p className="discribe">{ele.title}</p>
                                     <p className="price">Price: {ele.price}$ </p>
-                                    <button onClick={()=> clickHandler(ele)}>
+                                    <button onClick={()=> {clickHandler(ele); patcher({type:"Add", ele:ele})} }>
                                             <FontAwesomeIcon icon={faCartShopping} />
                                     </button>
                                 </div>
