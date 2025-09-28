@@ -1,0 +1,58 @@
+.navbar{
+    background-color: #eeeeee5d;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top:0;
+    width:100%
+}
+.navbar ul {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+.listContainer{
+    display: inline-block;
+}
+.navbar ul li{
+    width:fit-content;
+    padding: 10px;
+    margin:0px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+}
+.navbar ul li:hover {
+    background-color: #EEE;
+}
+.navbar ul li a{
+    all: unset;
+}
+.navbar ul li button.register{
+    all: unset;
+    background-color: white; 
+    padding:3px;
+    margin:0px;
+    border-radius:0px 50px 50px 0px ;
+}
+
+.navbar ul li button.login{
+    all: unset;
+    padding:3px;
+    /* color:white; */
+    background-color: rgb(19, 255, 19);;
+    border-radius: 50px 0 0  50px ;
+}
+.navbar ul li.btn:hover{
+    background-color: transparent;
+}
+/* @media (min-width:300px) and (max-width:560px) {
+    .navbar{
+        justify-content: space-between;
+    }
+    .navbar ul li{
+        padding:10px 4px;
+        font-size: 12px;
+    }
+} */

@@ -1,0 +1,19 @@
+.aboutapplication{
+    height:100vh;
+    background-image:linear-gradient(green,rgb(19, 255, 19) ) ;
+}
+.aboutapplication h1{
+    padding:0;
+    margin: 0;
+}
+.aboutapplication a{
+    all: unset;
+}
+.aboutapplication button{
+    all: unset;
+    padding:10px;
+    background-color: #DDD;
+    margin: 10px;
+    border-radius: 50%;
+    
+}

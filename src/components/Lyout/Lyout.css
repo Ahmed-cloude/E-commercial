@@ -1,0 +1,99 @@
+.lyout {
+    min-height: 94vh;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.lyout h2{
+    padding:0px;
+    margin:0;
+    height: fit-content;
+    margin-top: 13%;
+}
+.lyout a{
+    all: unset;
+}
+.lyout a button{
+    all:unset;
+    margin-top:100px;
+    padding:10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-bottom: 4px solid rgb(19, 255, 19);
+    background-image: linear-gradient(green,rgb(19, 255, 19) );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: left;
+    transition: background-size 500ms ease-in-out;
+}
+.lyout a button:hover{
+    background-size: 100% 100%;
+    color:white
+}
+.lyout img{
+    background-color: green;
+    height:fit-content;
+    animation-name: viberation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    max-height: 500px;
+}
+
+.imageContainer{
+    height:600px
+}
+@keyframes viberation{
+    0%{
+        margin-top: 5%;
+    }
+    50%{
+        margin-top: 0%;
+    }
+    100%{
+        margin-top: 5%;
+    }
+}
+@media (min-width:300px) and (max-width:560px) {
+    .lyout{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .lyout img{
+        width:80% ; 
+        flex-wrap: wrap;
+        height: 300px;
+    }
+    .imageContainer{
+        height:400px;
+    }
+    .lyout h2{
+        width: 90%;
+        flex-wrap: wrap;
+        margin-left:5%;
+    }
+    .lyout a button{
+        font-size: 16px;
+        background-size: 100% 100%;
+        color:white;
+        padding:10px 0px
+    }
+}
+@media (min-width:561px) and (max-width:1035px) {
+    .lyout img{
+        flex-wrap: wrap;
+        height: 300px;
+    }
+    .lyout h2{
+        flex-wrap: wrap;
+        margin-left:5%;
+        font-size: 20px;
+    }
+    .lyout a button{
+        font-size: 16px;
+        background-size: 100% 100%;
+        color:white;
+        width:fit-content
+    }
+}

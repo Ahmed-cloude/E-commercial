@@ -1,0 +1,14 @@
+.conatnt{
+    display: inline-block;
+    width:100%
+}
+.clothes{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding:0;
+    margin:0;
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.329);
+    text-decoration-line: line-through;
+    text-align: center;
+}
+

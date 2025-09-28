@@ -1,0 +1,64 @@
+.register{
+    height:100vh;
+    background-image: linear-gradient(white,#000000);
+    margin:0px;
+}
+.register .container{
+    background-color: rgb(255, 255, 255);
+    width:400px;
+    position: relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 0px ;
+}
+.register .container p{
+    margin:0;
+    padding:30px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.register .container legend{
+    width:fit-content;
+    margin-left:14% ;
+    transform: translateY(50%);
+    background-color: white;
+    padding: 0 3px
+}
+.register .container input{
+    width:80%;
+    margin-left:10%;
+    padding: 15px 0 15px 3px;
+    border: 1px solid black;
+}
+.register .container input:focus{
+    outline: none;
+}
+.register .container button{
+    width:80%;
+    margin: 30px 0 30px 10%;
+    padding: 10px 0 ;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color:white;
+    border: 0px;
+
+}
+.register .container button:hover{
+    cursor: pointer;
+    color: black;
+    background-color: #DDD;
+    box-shadow: 1px 1px 10px 0px;
+}
+
+@media (min-width:300px) and (max-width:400px){
+    .register .container{
+        width:300px;
+        top:10%;
+        left:50%;
+        transform: translate(-50%,0);
+    }
+}

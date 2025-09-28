@@ -1,0 +1,33 @@
+.Spiner {
+    text-align: center;
+}
+.Spiner .outSpiner {
+    width:150px;
+    height:150px;
+    margin:auto;
+    position: relative;
+    border: 5px solid rgba(0, 0, 0, 0.377);
+    border-radius: 50%;
+    border-bottom-color:transparent ;
+    animation: spin2 2s ease-in-out infinite;
+}
+.Spiner .outSpiner .inSpiner{
+    width:130px;
+    height:130px;
+    position: absolute;
+    top:5px;
+    left:5px;
+    border: 5px solid #DDD;
+    border-radius: 50%;
+    border-top-color:transparent ;
+    transform-origin: 50% 50%;
+    animation: spin1 1s ease-in-out infinite;
+}
+@keyframes spin1 {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes spin2 {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
