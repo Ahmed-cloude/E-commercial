@@ -9,6 +9,7 @@ const Login =()=>{
             <div className='container'>
                 <form >
                     <p>Login</p>
+                    <input type="text" placeholder="Username" required/><br/>
                     <input type="password" required placeholder="password"/>
                     <input type="email" required placeholder="Email"/><br/>
                     <button onClick={clickHandler}>Login</button>

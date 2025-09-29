@@ -77,7 +77,8 @@
     text-align: center;
     cursor: pointer;
 }
-/* 
+
+
 @media (min-width:295px) and (max-width:560px) {
     .contactTitle{
         margin: 80px 0px 0px;
@@ -145,4 +146,4 @@
         padding:10px ;
         font-size: 16px;
     }
-} */
+} 
