@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import "./Content.css";
 import Items1 from "./Items1/Item1";
 import Spiner from "../Spiner/Spiner";
+import { Link } from "react-router-dom";
+
 const Contant =(props)=>{
 
     const [data,setData] =useState({
@@ -51,7 +53,11 @@ const Contant =(props)=>{
         <div className="conatnt" style={{width:`${props.widthOffApp}px`}}>
             <div className="">
                 <p className="clothes">Items</p>
-                
+                <div className="addBtnContainer">
+                <Link to='/addItems' className="linktoadd" > 
+                    <p  className="addBtn">Add Product <span style={{'fontSize':'26px', 'color':'rgb(18, 211, 18)'}}>+</span></p>
+                </Link>
+                </div>
                 {data.data.length===0 ? <Spiner />:" "}
                 {window.localStorage.getItem("clothes")? <Items1 name="Clothes" data={data} />:" "}
                 {window.localStorage.getItem("shoes")?<Items1 name="Shoes" data={data} />:" "}

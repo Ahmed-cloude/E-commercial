@@ -9,6 +9,7 @@ import AllItems from './components/AllItems/AllItems';
 import Cart from './components/Cart/Cart';
 import Login from './components/Log/Login';
 import Register from './components/Log/Register';
+import AddItem from './components/AddItem/addItem';
 import { Provider } from 'react-redux';
 import { Store } from './store';
 
@@ -24,6 +25,7 @@ root.render(
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/addItems' element ={<AddItem />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>

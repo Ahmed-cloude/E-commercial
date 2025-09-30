@@ -11,4 +11,24 @@
     text-decoration-line: line-through;
     text-align: center;
 }
+.addBtnContainer{
+    
+    
+    padding:20px;
+    margin:10px 0;
+    display: flex;
+    justify-content: center;
+}
+.addBtn{
 
+    padding:25px 50px;
+    border-radius: 20px;
+    border:2px solid rgb(18, 211, 18);
+    cursor: pointer;
+}
+.linktoadd{
+    text-decoration: none;
+    color: black;
+    padding:10px;
+    margin:10px 0
+}

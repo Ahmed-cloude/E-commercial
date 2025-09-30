@@ -1,0 +1,106 @@
+
+.addItem{
+    /* background-color: red; */
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addItemShap{
+    background-color: #EEE;
+    width:700px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding:15px;
+    border-radius: 10px;
+}
+.imagePlace, .imagePlace img {
+    width:300px;
+    height:300px;
+    background-color: white;
+}
+.addItemShap .addPhoto{
+    width:300px;
+    padding: 15px 0;
+    margin-top:30px;
+    border: 1px solid rgb(8, 235, 8);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+.addItemShap form{
+    width:370px
+}
+
+.addItemShap form input, .addItemShap form select{
+    width:95%;
+    padding:10px 0 10px 10px ;
+    border :none;
+    border-bottom : 2px solid black;
+    /* background-color: transparent; */
+    margin: 7px 0 12px ;
+}
+.addItemShap form input:focus ,
+.addItemShap form select:focus,
+.addItemShap .addPhoto:focus{
+    outline: none;
+}
+
+.addItemShap section {
+    display: flex;
+    justify-content: center !important;
+    gap: 5px;
+    
+}
+.addItemShap section button{
+    padding: 15px 0;
+    margin-top:38px;
+    width:40%;
+    border :none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.addbtn{
+    background-image: linear-gradient(rgb(7, 158, 7),rgb(19, 255, 19) );
+    color:white;
+    font-weight: bold;
+    
+}
+.cancelBtn{
+    border:1px solid rgba(0, 0, 0, 0.589) !important;
+    background-color: white ;
+}
+
+.addPhoto label{
+    padding : 10px 90px;
+    cursor: pointer;
+}
+@media (max-width: 350px){
+    
+    .imagePlace, .imagePlace img {
+        margin:auto;
+        width:260px;
+        height:260px
+    }
+    .addItemShap .addPhoto{
+        width:260px
+    }
+}
+@media (max-width: 750px){
+    .addItemShap{
+        width:95%;
+        display: block;
+    }
+    .firstSection{
+        text-align: center;
+    }
+    .imagePlace{
+        margin:auto
+    }
+    .secondSection form{
+        width:100%;
+        margin: auto;
+    }
+}

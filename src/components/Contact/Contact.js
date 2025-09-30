@@ -20,6 +20,7 @@ const Contact =()=>{
                     </div>
                 </h2>
                 <form>
+                    
                     <label>Name</label> <br/>
                     <input type="text" required/><br/>
 

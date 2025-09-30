@@ -4,9 +4,12 @@ const Admin = {
     email:"admin1@gmail.com",
     password:"123123123"
 }
+const AddItem ={
+    image:''
+}
 
 
-const reducer=(state={cart:[] , ele:{}, admin:false, Admin} , action)=>{
+const reducer=(state={cart:[] , ele:{}, admin:false, Admin ,AddItem} , action)=>{
     if(action.type==="Add"){
         console.log(action.ele)
         return {
@@ -32,6 +35,13 @@ const reducer=(state={cart:[] , ele:{}, admin:false, Admin} , action)=>{
         return {
             ...state,
             admin:true,
+        }
+    }
+    else if(action.type === "AddItem"){
+        // console.log("Admin mood");
+        return {
+            ...state,
+            cart:[...state.cart , action.payload]
         }
     }
     return state

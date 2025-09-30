@@ -31,6 +31,10 @@ const NavBar =()=>{
     }
     return (
         <div className="navbar">
+            {/* <div>
+            <label htmlFor="fileInput">add</label>
+            <input id="fileInput"  style={{'display':'none'}} type="file" className="hidden"/>
+            </div> */}
             <ul>
                 <li className="btn"> 
                     <Link to="/login">
