@@ -29,7 +29,7 @@ const AllItems =()=>{
     return(
         <div className='allItems'>
             <button>
-                <Link to="/" >
+                <Link to="/main" >
                     <FontAwesomeIcon icon={faArrowCircleLeft} />
                 </Link>
             </button>

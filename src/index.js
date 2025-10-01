@@ -10,8 +10,11 @@ import Cart from './components/Cart/Cart';
 import Login from './components/Log/Login';
 import Register from './components/Log/Register';
 import AddItem from './components/AddItem/addItem';
+import ListView from './components/Log/listView/list'
+import Main from './components/main/main';
 import { Provider } from 'react-redux';
 import { Store } from './store';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +29,8 @@ root.render(
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/addItems' element ={<AddItem />} />
+          <Route path='/listView' element ={<ListView />} />
+          <Route path='/main' element ={<Main />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>

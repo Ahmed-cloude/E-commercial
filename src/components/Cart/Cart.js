@@ -41,7 +41,7 @@ const Cart =()=>{
     return(
         <div className="cart">
             <div className="cortShape">
-                <button className="backBtn"> <Link to="/"><FontAwesomeIcon icon={faTimes} /> </Link> </button>
+                <button className="backBtn"> <Link to="/main"><FontAwesomeIcon icon={faTimes} /> </Link> </button>
                 <div className="allOrderItems" >
                     {
                         itemsss.cart.length !==0 ?

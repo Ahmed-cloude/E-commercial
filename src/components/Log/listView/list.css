@@ -1,0 +1,84 @@
+.mainContainer{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE;
+}
+.container {
+    width:300px;
+    height :auto;
+    background-color: #e0dddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+.iconContainer{
+    background-image: linear-gradient(green,rgb(19, 255, 19) );
+    color:white;
+    width:fit-content;
+    font-size: 40px;
+    margin: 20px auto 50px;
+    padding:10px 15px;
+    border-radius: 100%;
+}
+.container .btn {
+    text-decoration: none;
+    padding : 10px;
+    margin:10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.container .btn a{
+    text-decoration: none;
+    color:white;
+    padding : 10px 100px;
+    cursor: pointer;
+}
+.logBtn {
+    background-image: linear-gradient(green , rgb(3, 175, 3),rgb(19, 255, 19) ); 
+    font-weight: bold ;
+}
+.regBtn {
+    background-image: linear-gradient(rgb(19, 255, 19),rgb(3, 175, 3),green ); 
+    font-weight: bold ;
+}
+.logBtn a:hover,
+.regBtn a:hover{
+    color:black!important;
+}
+.visBtn{
+    background-color: white;
+    font-weight: bold ;
+}
+.visBtn a {
+    color:black !important
+}
+.visBtn a:hover{
+    color:rgb(8, 255, 8) !important
+}
+.iconsEnters{
+    display: flex;
+    justify-content: center;
+    gap :10px;
+    padding:14px;
+}
+.iconsEnters a{
+    background-color: white;
+    text-decoration: none;
+    color: rgb(16, 236, 16);
+    padding:10px 13px;
+    border-radius: 100%;
+    font-size: 26px;
+}
+.iconsEnters a:hover{
+    color:white !important;
+    background-image:  linear-gradient(rgb(19, 255, 19),rgb(3, 175, 3),green );;
+}
+@media (max-width:350px){
+    .container{
+        width:250px;
+    }
+    .container .btn a{
+        padding:10px 50px
+    }
+}

@@ -29,13 +29,14 @@ const NavBar =()=>{
     const loginHandler =(e)=>{
         console.log(e.target)
     }
+    const logoutHandler =()=>{
+        localStorage.clear();
+        sessionStorage.clear();
+        window.location.href='/'
+    }
     return (
         <div className="navbar">
-            {/* <div>
-            <label htmlFor="fileInput">add</label>
-            <input id="fileInput"  style={{'display':'none'}} type="file" className="hidden"/>
-            </div> */}
-            <ul>
+            {/* <ul>
                 <li className="btn"> 
                     <Link to="/login">
                         <button className="login" onClick={(e)=> loginHandler(e)}> login</button>
@@ -43,7 +44,25 @@ const NavBar =()=>{
 
                     <Link to='/register' ><button className="register">register</button></Link>
                 </li>
-            </ul>
+            </ul> */}
+            {
+                window.localStorage.getItem('loged')=== 'false' ?
+                    <ul>
+                        <li className="btn"> 
+                            <Link to="/login">
+                                <button className="login" onClick={(e)=> loginHandler(e)}> login</button>
+                            </Link>
+
+                            <Link to='/register' ><button className="register">register</button></Link>
+                        </li>
+                    </ul>
+                    :
+                    // eslint-disable-next-line no-restricted-globals
+                    <div className="logout" onClick={logoutHandler} >
+                        log out
+                    </div>
+                    
+            }
             <ul>
                 <div className="linkContainer">
                     <li onClick={ppp} >Home </li>

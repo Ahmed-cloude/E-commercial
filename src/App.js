@@ -4,17 +4,19 @@ import Lyout from './components/Lyout/Lyout';
 import Content from './components/Contant/Content';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import ListView from './components/Log/listView/list'
 import { Provider } from 'react-redux';
 import { Store } from './store';
 function App() {
   return (
     <Provider store={Store}>
       <div className="App">
-        <NavBar />
+        {/* <NavBar />
         <Lyout />
         <Content />
         <Contact />
-        <Footer />
+        <Footer /> */}
+        <ListView />
       </div>
     </Provider>
   );
