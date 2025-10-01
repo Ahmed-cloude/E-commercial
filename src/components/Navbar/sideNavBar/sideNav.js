@@ -47,11 +47,20 @@ const sideNav = () => {
                         <li onClick={ppp1} style={style}>Contant</li>
                         <li onClick={ppp2} style={style}>Contect</li>
                         <li style={style}><Link to="/allitems" >items </Link></li>
-                        <li className="">
+                        {/* <li className="">
                             <Link className='carttt' to="/cart">
                                 <FontAwesomeIcon icon={faCartArrowDown} />
                             </Link> 
-                        </li>
+                        </li> */}
+                        {
+                            window.localStorage.getItem('loged')=== 'true'?
+                                <li className="">
+                                    <Link className='carttt' to="/cart">
+                                        <FontAwesomeIcon icon={faCartArrowDown} />
+                                    </Link> 
+                                </li>
+                                :""
+                        }
                     </ul>
             </div>
         </div>

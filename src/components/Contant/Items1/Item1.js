@@ -30,9 +30,12 @@ const Items1 =(props)=>{
                                     <img src={ele.images[1]} />
                                     <p className="discribe">{ele.title}</p>
                                     <p className="price">Price: {ele.price}$ </p>
-                                    <button onClick={()=> {clickHandler(ele); patcher({type:"Add", ele:ele})} }>
-                                            <FontAwesomeIcon icon={faCartShopping} />
-                                    </button>
+                                    {
+                                        window.localStorage.getItem('loged') === "true" ?
+                                            <button onClick={()=>patcher({type:'Add', ele:ele})}>
+                                                <FontAwesomeIcon icon={faCartShopping} />
+                                            </button>:""
+                                    }
                                 </div>
                             );
                         }

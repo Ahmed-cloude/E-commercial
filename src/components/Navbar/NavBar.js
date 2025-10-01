@@ -57,7 +57,6 @@ const NavBar =()=>{
                         </li>
                     </ul>
                     :
-                    // eslint-disable-next-line no-restricted-globals
                     <div className="logout" onClick={logoutHandler} >
                         log out
                     </div>
@@ -70,12 +69,20 @@ const NavBar =()=>{
                     <li onClick={ppp2} >Contect</li>
                     <li><Link to="/allitems">items </Link></li>
                 </div>
-                <li className="cartIcon">
+                {/* <li className="cartIcon">
                     <Link to="/cart">
                         <FontAwesomeIcon icon={faCartArrowDown} />
                     </Link> 
-                </li>
-                
+                </li> */}
+                {
+                    window.localStorage.getItem('loged')=== 'true'?
+                        <li className="cartIcon">
+                            <Link to="/cart">
+                                <FontAwesomeIcon icon={faCartArrowDown} />
+                            </Link> 
+                        </li>
+                        :""
+                }
                 <SideNav />
             </ul>
             

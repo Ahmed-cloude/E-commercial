@@ -11,7 +11,7 @@ const list = () => {
                 <div className='iconContainer' > <FontAwesomeIcon icon={faCartShopping} /> </div>
                 <div className='btn logBtn'><Link to='/login' >login</Link></div>
                 <div className='btn regBtn'> <Link to='/register' >register</Link> </div>
-                <div className='btn visBtn'> <Link to='/main' >Visit</Link> </div>
+                <div className='btn visBtn' onClick={window.localStorage.setItem('loged',false)}> <Link to='/main' >Visit</Link> </div>
                 <div className='iconsEnters'>
                     <div className='' > <Link to='/main' > <FontAwesomeIcon icon={faGoogle} />  </Link> </div>
                     <div className='' > <Link to='/main' > <FontAwesomeIcon icon={faFacebook} />  </Link> </div>
