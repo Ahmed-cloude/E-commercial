@@ -4,14 +4,9 @@ const Admin = {
     email:"admin1@gmail.com",
     password:"123123123"
 }
-const AddItem ={
-    image:''
-}
 
-
-const reducer=(state={cart:[] , ele:{}, admin:false, Admin ,AddItem} , action)=>{
+const Reducer=  (state={cart:[],data:[],ele:{}, admin:false, Admin } , action)=>{
     if(action.type==="Add"){
-        console.log(action.ele)
         return {
             ...state,
             cart:[...state.cart , action.ele]
@@ -21,7 +16,10 @@ const reducer=(state={cart:[] , ele:{}, admin:false, Admin ,AddItem} , action)=>
         let newEdite = state.cart.filter((ele2)=>{
             return action.ele.id  !== ele2.id;
         })
-        return {...state , cart:[...newEdite]}
+        return {
+            ...state ,
+            cart:[...newEdite]
+        }
     }
     else if(action.type === "Buy"){
         window.alert("Buy successed")
@@ -38,13 +36,13 @@ const reducer=(state={cart:[] , ele:{}, admin:false, Admin ,AddItem} , action)=>
         }
     }
     else if(action.type === "AddItem"){
-        // console.log("Admin mood");
+        console.log(state.data)
         return {
             ...state,
-            cart:[...state.cart , action.payload]
+            data:[...state.data, action.payload],
         }
     }
     return state
 }
 
-export const Store = createStore(reducer)
+export const Store = createStore(Reducer)

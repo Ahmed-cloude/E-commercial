@@ -3,12 +3,14 @@ import "./Content.css";
 import Items1 from "./Items1/Item1";
 import Spiner from "../Spiner/Spiner";
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 const Contant =(props)=>{
 
     const [data,setData] =useState({
         data:[],
     })
+
+    const itemss = useSelector(state=>state);
 
     useEffect(()=>{
         window.localStorage.removeItem("clothes")
@@ -54,9 +56,14 @@ const Contant =(props)=>{
             <div className="">
                 <p className="clothes">Items</p>
                 <div className="addBtnContainer">
-                <Link to='/addItems' className="linktoadd" > 
-                    <p  className="addBtn">Add Product <span style={{'fontSize':'26px', 'color':'rgb(18, 211, 18)'}}>+</span></p>
-                </Link>
+                
+                {
+                    itemss.admin ? <Link to='/addItems' className="linktoadd" > 
+                                        <p  className="addBtn">Add Product <span style={{'fontSize':'26px', 'color':'rgb(18, 211, 18)'}}>+</span></p>
+                                    </Link> : 
+                                    null
+                }
+
                 </div>
                 {data.data.length===0 ? <Spiner />:" "}
                 {window.localStorage.getItem("clothes")? <Items1 name="Clothes" data={data} />:" "}

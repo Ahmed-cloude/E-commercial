@@ -3,7 +3,7 @@ import "./Item1.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import Spiner from "../../Spiner/Spiner";
-import { useState, useEffect } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 
 const Items1 =(props)=>{
@@ -37,6 +37,22 @@ const Items1 =(props)=>{
                             );
                         }
                     }) : <Spiner />
+                }
+                {props.data.data.length !==0 ? itemss.data.map((ele,id)=>{
+                    
+                        if((ele.category.name).toLowerCase() ===(props.name).toLowerCase() ){
+                            return(
+                                <div className="item" key={id}>
+                                    <img src={ele.images[1]} />
+                                    <p className="discribe">{ele.title}</p>
+                                    <p className="price">Price: {ele.price}$ </p>
+                                    <button onClick={()=> {clickHandler(ele); patcher({type:"Add", ele:ele})} }>
+                                            <FontAwesomeIcon icon={faCartShopping} />
+                                    </button>
+                                </div>
+                            );
+                        }
+                    }) :''
                 }
                 
             </div>

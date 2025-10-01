@@ -48,7 +48,7 @@ const sideNav = () => {
                         <li onClick={ppp2} style={style}>Contect</li>
                         <li style={style}><Link to="/allitems" >items </Link></li>
                         <li className="">
-                            <Link to="/cart">
+                            <Link className='carttt' to="/cart">
                                 <FontAwesomeIcon icon={faCartArrowDown} />
                             </Link> 
                         </li>

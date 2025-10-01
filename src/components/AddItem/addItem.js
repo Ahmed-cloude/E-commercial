@@ -1,7 +1,10 @@
 import React from 'react'
 import './addItem.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { useState } from 'react'
+import { useState } from 'react';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const AddItem = () => {
     const [url,setUrl]=useState('')
@@ -23,27 +26,27 @@ const AddItem = () => {
       }
     }
 
-    const addHandler =()=>{
+    const  addHandler = async ()=>{
       const inputs = document.querySelectorAll('form input');
       const name = document.querySelector('select')
+      const element ={
+        category:{
+          name:name.value
+        },
+        price:parseInt(inputs[1].value),
+        title:inputs[0].value,
+        images:[url,url]
+      }
       patcher({
           type: 'AddItem',
-          payload:{
-          category:{
-            name:name.value
-          },
-          price:inputs[1].value,
-          title:parseInt(inputs[0].value),
-          images:[url,url]
-        }
+          payload:element
       })
-      
     }
     return (
         <div className='addItem'>
-            <div className='addItemShap'>
+            <div className='addItemShap' >
+            {/* <FontAwesomeIcon icon={faTimes}  /> */}
                 <div  className='firstSection'>
-                    
                     <div className='imagePlace'>
                       <img src={url} alt='img'  />
                     </div>
@@ -60,6 +63,7 @@ const AddItem = () => {
                     </button>
                 </div>
                 <div className='secondSection'>
+                  <Link to='/' ><FontAwesomeIcon icon={faTimes} /></Link>
                     <form >
                         <select>
                             <option>clothes</option>
